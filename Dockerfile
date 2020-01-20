@@ -1,6 +1,6 @@
 FROM golang:alpine AS builder
 
-RUN apk update && apk add --no-cache \
+RUN apk add --update --no-cache \
   build-base \
   gcc \
   git; \
@@ -8,7 +8,9 @@ RUN apk update && apk add --no-cache \
 
 FROM alpine:latest
 
-RUN apk --no-cache add ca-certificates
+RUN apk add --update --no-cache \
+  ca-certificates \
+  bind-tools
 
 COPY --from=builder /go/bin/cloudflared /bin
 
