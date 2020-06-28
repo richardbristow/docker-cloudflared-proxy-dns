@@ -1,8 +1,8 @@
-# Cloudflared proxy-dns
+# docker-cloudflared-proxy-dns
 
 Runs the cloudflared service in a container, and starts a DNS over HTTPS proxy to 1.1.1.1
 
-More information available on the [Cloudflare developer site](https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy/).
+More information on cloudflared is available at the [Cloudflare developer site](https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy/).
 
 ## Example usage
 
