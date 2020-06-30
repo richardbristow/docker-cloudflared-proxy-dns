@@ -22,4 +22,4 @@ ENTRYPOINT [ "cloudflared", "proxy-dns" ]
 CMD [ "--address", "0.0.0.0", "--port", "5053", "--upstream", "https://1.1.1.1/dns-query", "--upstream", "https://1.0.0.1/dns-query" ]
 
 HEALTHCHECK --interval=30s --timeout=20s --start-period=20s \
-  CMD dig +short @127.0.0.1 -p 5053 cloudflare.com A || exit 1
+  CMD dig +short @127.0.0.1 -p 5053 cloudflare.com AAAA || exit 1
