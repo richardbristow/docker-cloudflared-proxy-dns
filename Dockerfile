@@ -2,9 +2,11 @@ FROM golang:alpine AS builder
 
 RUN apk add --update --no-cache \
   build-base \
-  gcc \
   git; \
-  go get -v github.com/cloudflare/cloudflared/cmd/cloudflared;
+  git clone https://github.com/cloudflare/cloudflared.git; \
+  cd cloudflared; \
+  make cloudflared; \
+  go install github.com/cloudflare/cloudflared/cmd/cloudflared
 
 FROM alpine:latest
 
