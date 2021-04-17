@@ -1,4 +1,0 @@
-sut:
-  build: .
-  entrypoint: cloudflared
-  command: ['--version']
