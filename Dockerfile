@@ -1,4 +1,4 @@
-FROM golang:alpine AS builder
+FROM golang:1.16-alpine AS builder
 
 RUN apk add --update --no-cache \
   build-base \
@@ -8,7 +8,7 @@ RUN apk add --update --no-cache \
   make cloudflared; \
   go install github.com/cloudflare/cloudflared/cmd/cloudflared
 
-FROM alpine:latest
+FROM alpine:3.13
 
 RUN apk add --update --no-cache \
   ca-certificates \
