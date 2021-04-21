@@ -1,6 +1,6 @@
 # docker-cloudflared-proxy-dns
 
-![build-and-publish](https://github.com/richardbristow/docker-cloudflared-proxy-dns/actions/workflows/build-and-publish.yml/badge.svg)
+[![Build and Publish](https://github.com/richardbristow/docker-cloudflared-proxy-dns/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/richardbristow/docker-cloudflared-proxy-dns/actions/workflows/build-and-publish.yml)
 
 Runs the cloudflared service in a container, and starts a DNS over HTTPS proxy to 1.1.1.1
 
