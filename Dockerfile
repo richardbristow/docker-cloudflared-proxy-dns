@@ -8,7 +8,7 @@ RUN apk add --update --no-cache \
   && make cloudflared \
   && go install github.com/cloudflare/cloudflared/cmd/cloudflared
 
-FROM alpine:3.16.0
+FROM alpine:3.17.1
 
 RUN apk add --update --no-cache \
   ca-certificates \
